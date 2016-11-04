@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *msgTxt;
+- (IBAction)msgSendBtn:(id)sender;
+@property (strong, nonatomic) IBOutlet UITableView *tblView;
 
 @end
 
