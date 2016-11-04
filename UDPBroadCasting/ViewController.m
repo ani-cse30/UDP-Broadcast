@@ -17,8 +17,9 @@ NSMutableArray *chat;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // self.navigationController.title=@"UDP Broadcasting Chatroom";
-    chat=[[NSUserDefaults standardUserDefaults] objectForKey:@"UDPChat"];
+    self.navigationItem.title=@"UDP Broadcasting Chatroom";
+
+   chat=[[NSUserDefaults standardUserDefaults] objectForKey:@"UDPChat"];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveTestNotification:)
                                                  name:@"MessageNotification"
