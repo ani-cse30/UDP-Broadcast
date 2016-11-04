@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UDPBroadCaster.h"
+#import "DirectMessage.h"
 
 @interface ViewController ()
 
@@ -78,7 +79,13 @@ NSMutableArray *chat;
     cell.detailTextLabel.text=[[chat objectAtIndex:indexPath.row] objectForKey:@"msg"];
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    DirectMessage *DM = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectMessage"];
+    DM.ip=[[chat objectAtIndex:indexPath.row] objectForKey:@"ip"];
+    [self.navigationController pushViewController:DM animated:YES];
+}
 
 - (IBAction)msgSendBtn:(id)sender {
     

@@ -66,9 +66,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="2og-H6-WUd" kind="push" id="eEH-kO-8eh"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -90,7 +87,9 @@
                             <constraint firstAttribute="trailing" secondItem="s1q-yE-dB8" secondAttribute="trailing" id="z5b-e2-tp1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0me-t9-7MX"/>
+                    <navigationItem key="navigationItem" id="0me-t9-7MX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ZUh-fh-cRl"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="msgTxt" destination="IPI-Nf-viY" id="66m-go-3dN"/>
                         <outlet property="tblView" destination="s1q-yE-dB8" id="VDJ-Gt-rzY"/>
@@ -100,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="1014" y="68"/>
         </scene>
-        <!--View Controller-->
+        <!--Direct Message-->
         <scene sceneID="k4d-B0-VXU">
             <objects>
-                <viewController id="2og-H6-WUd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DirectMessage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2og-H6-WUd" customClass="DirectMessage" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iFb-HZ-ITI"/>
                         <viewControllerLayoutGuide type="bottom" id="4vS-Kg-6cy"/>
@@ -111,13 +110,43 @@
                     <view key="view" contentMode="scaleToFill" id="P3E-uC-bIi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Type a message here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jX-FR-SIa">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="5I5-BH-o5c"/>
+                                    <constraint firstAttribute="height" constant="30" id="q7g-q0-BgR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za3-ub-Kwd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1MQ-HQ-IUz"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="DMBtn:" destination="2og-H6-WUd" eventType="touchUpInside" id="uZT-Ca-0g1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Za3-ub-Kwd" secondAttribute="trailing" constant="7" id="2hz-X0-5V2"/>
+                            <constraint firstItem="9jX-FR-SIa" firstAttribute="top" secondItem="iFb-HZ-ITI" secondAttribute="bottom" constant="45" id="H1R-B5-mfM"/>
+                            <constraint firstItem="Za3-ub-Kwd" firstAttribute="top" secondItem="9jX-FR-SIa" secondAttribute="top" id="O49-pu-Buo"/>
+                            <constraint firstItem="Za3-ub-Kwd" firstAttribute="height" secondItem="9jX-FR-SIa" secondAttribute="height" id="OcV-q5-xdT"/>
+                            <constraint firstItem="9jX-FR-SIa" firstAttribute="leading" secondItem="P3E-uC-bIi" secondAttribute="leading" constant="16" id="cSa-uv-Jhu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8qg-u5-1c4"/>
+                    <connections>
+                        <outlet property="dMTxt" destination="9jX-FR-SIa" id="crX-4B-QPy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gka-WL-1OX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592.8" y="-44.527736131934034"/>
+            <point key="canvasLocation" x="1772" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gxg-hM-zPn">

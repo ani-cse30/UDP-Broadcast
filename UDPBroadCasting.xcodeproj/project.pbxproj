@@ -16,6 +16,7 @@
 		07709D351DCB318B0050D076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07709D331DCB318B0050D076 /* LaunchScreen.storyboard */; };
 		07F83D541DCC76EE007B1074 /* UDPListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F83D531DCC76EE007B1074 /* UDPListener.m */; };
 		07F83D571DCC772A007B1074 /* UDPBroadCaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F83D561DCC772A007B1074 /* UDPBroadCaster.m */; };
+		07F83D5D1DCC8064007B1074 /* DirectMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F83D5C1DCC8064007B1074 /* DirectMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		07F83D531DCC76EE007B1074 /* UDPListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UDPListener.m; path = UDP/UDPListener.m; sourceTree = "<group>"; };
 		07F83D551DCC771B007B1074 /* UDPListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UDPListener.h; path = UDP/UDPListener.h; sourceTree = "<group>"; };
 		07F83D561DCC772A007B1074 /* UDPBroadCaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UDPBroadCaster.m; path = UDP/UDPBroadCaster.m; sourceTree = "<group>"; };
+		07F83D5B1DCC8064007B1074 /* DirectMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectMessage.h; sourceTree = "<group>"; };
+		07F83D5C1DCC8064007B1074 /* DirectMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				07709D261DCB318B0050D076 /* AppDelegate.m */,
 				07709D281DCB318B0050D076 /* ViewController.h */,
 				07709D291DCB318B0050D076 /* ViewController.m */,
+				07F83D5B1DCC8064007B1074 /* DirectMessage.h */,
+				07F83D5C1DCC8064007B1074 /* DirectMessage.m */,
 				07709D2B1DCB318B0050D076 /* Main.storyboard */,
 				07709D311DCB318B0050D076 /* Assets.xcassets */,
 				07709D331DCB318B0050D076 /* LaunchScreen.storyboard */,
@@ -92,10 +97,10 @@
 		07709D3C1DCB319F0050D076 /* UDP */ = {
 			isa = PBXGroup;
 			children = (
-				07F83D561DCC772A007B1074 /* UDPBroadCaster.m */,
 				07F83D551DCC771B007B1074 /* UDPListener.h */,
 				07F83D531DCC76EE007B1074 /* UDPListener.m */,
 				07F83D521DCC76D0007B1074 /* UDPBroadCaster.h */,
+				07F83D561DCC772A007B1074 /* UDPBroadCaster.m */,
 			);
 			name = UDP;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				07709D2A1DCB318B0050D076 /* ViewController.m in Sources */,
 				07709D271DCB318B0050D076 /* AppDelegate.m in Sources */,
 				07709D301DCB318B0050D076 /* UDPBroadCasting.xcdatamodeld in Sources */,
+				07F83D5D1DCC8064007B1074 /* DirectMessage.m in Sources */,
 				07F83D541DCC76EE007B1074 /* UDPListener.m in Sources */,
 				07709D241DCB318B0050D076 /* main.m in Sources */,
 			);
